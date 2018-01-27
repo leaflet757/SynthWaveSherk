@@ -152,6 +152,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1069513737435316, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
   m_IsPrefabParent: 0
@@ -187,6 +191,45 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!20 &1007683883 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20263645818507860, guid: fbae17a911df68942ae3cc2a9488fdd7,
+    type: 2}
+  m_PrefabInternal: {fileID: 613942946}
+--- !u!1 &1147153517 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1144793355444192, guid: fbae17a911df68942ae3cc2a9488fdd7,
+    type: 2}
+  m_PrefabInternal: {fileID: 613942946}
+--- !u!114 &1147153518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147153517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af13d56418fa31843999517fa7554a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1007683883}
+  MoveSpeed: 10
+  CameraSensitivity: 1
+--- !u!54 &1147153520
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147153517}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &1285770419
 GameObject:
