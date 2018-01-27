@@ -32,3 +32,14 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+############################
+########## UNITY ###########
+############################
+/SynthWaveSherk/[Ll]ibrary/
+/SynthWaveSherk/[Tt]emp/
+/SynthWaveSherk/[Oo]bj/
+/SynthWaveSherk/[Bb]uild/
+/SynthWaveSherk/[Bb]uilds/
+/SynthWaveSherk/Assets/AssetStoreTools*
+/SynthWaveSherk/ProjectSettings/ProjectVersion.txt
