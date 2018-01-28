@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -12,6 +13,13 @@ public class Timer : MonoBehaviour {
     public GameObject Stage1;
     public GameObject Stage2;
 
+    public string label = "Sicc Beat Meter";
+
+    public Text timeUiText;
+    public Text sharkKillText;
+    public static int SharkDeathCount = 0;
+    private int lazyDeathCheck = 0;
+
     public delegate void OnStageHit(GameObject stage);
 
 
@@ -19,11 +27,15 @@ public class Timer : MonoBehaviour {
     {
         Stage1.GetComponent<StageHealthScript>().hitStage += Timer_hitStage;
         Stage2.GetComponent<StageHealthScript>().hitStage += Timer_hitStage;
+
+        timeUiText.text = label;
+        sharkKillText.text = "they are alive";
     }
 
     private void Timer_hitStage(GameObject damagedStage)
     {
         timeLeft -= 1;
+        timeUiText.text = label + ": " + timeLeft;
         if (timeLeft < 0)
         {
             //Time.timeScale = 0;     // just pauses time, need to end game
@@ -37,6 +49,11 @@ public class Timer : MonoBehaviour {
     void Update ()
     {
         //timeLeft -= Time.deltaTime;
-	    
+	    if (SharkDeathCount != lazyDeathCheck)
+        {
+            // update ui
+            lazyDeathCheck = SharkDeathCount;
+            sharkKillText.text = SharkDeathCount.ToString();
+        }
 	}
 }

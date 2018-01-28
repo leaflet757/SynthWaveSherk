@@ -16,7 +16,7 @@ public class OnSharkDeath : OnDeathScript
 
     public override void PerformDeathActionAndDestroy()
     {
-        source.PlayOneShot(deathSound2, 1f);
+        ++Timer.SharkDeathCount;
         Debug.Log("TODO: OnSharkDeath");
         Destroy(gameObject);
     }
