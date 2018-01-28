@@ -19,8 +19,6 @@ public class PlayerController : MonoBehaviour {
     private float vInput = 0;
     private float hInput = 0;
 
-    private bool vOnce = false;
-
     private void Awake()
     {
         //playerRotation = new Quaternion(1, 1, 0, 1); // only care about x and y

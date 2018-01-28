@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shark
   - Boomerang
+  - Stage
   layers:
   - Default
   - TransparentFX
