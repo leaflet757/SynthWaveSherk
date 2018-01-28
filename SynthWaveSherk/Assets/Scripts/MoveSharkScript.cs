@@ -20,7 +20,7 @@ public class MoveSharkScript : MonoBehaviour
     private void Start()
     {
         sharkAnim = GetComponent<Animator>();
-        //sharkAnim.Play(IdleState); // Should already be set as default in editor
+        sharkAnim.Play(IdleState); // Should already be set as default in editor
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class MoveSharkScript : MonoBehaviour
     public void StartAttack()
     {
         IsAttacking = true;
-        //sharkAnim.Play(RunningState);
+        sharkAnim.Play(RunningState);
     }
 
 }
