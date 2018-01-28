@@ -10,6 +10,7 @@ public class BoomerangScript : MonoBehaviour
     public Transform StartingTransform;
     
     private Rigidbody rb;
+    private Collider col;
     private float durationCounter = 0;
 
     private bool isHeldByPlayer = true;
@@ -21,6 +22,8 @@ public class BoomerangScript : MonoBehaviour
 
     private void Start()
     {
+        col = GetComponent<CapsuleCollider>();
+        col.enabled = false;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = false;
     }
@@ -42,6 +45,7 @@ public class BoomerangScript : MonoBehaviour
         if (isHeldByPlayer)
         {
             Debug.Log("Throwing Sicc Raangs!");
+            col.enabled = true;
             isHeldByPlayer = false;
             rb.isKinematic = false;
             transform.SetParent(null);
@@ -63,6 +67,7 @@ public class BoomerangScript : MonoBehaviour
         Debug.Log("Boomerang Resetting");
         isHeldByPlayer = true;
         rb.isKinematic = true;
+        col.enabled = false;
         durationCounter = 0;
         transform.SetParent(playerCamera.transform, false);
         transform.position = StartingTransform.position;
