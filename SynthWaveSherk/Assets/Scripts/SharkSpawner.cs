@@ -80,6 +80,6 @@ public class SharkSpawner : MonoBehaviour {
         LaunchShark(newShark.GetComponent<Rigidbody>(), startLocation, targetLocation);
         ++totalSharkSpawnedCount;
 
-        Debug.Log("Shark " + totalSharkSpawnedCount + " Spawned!");
+        //Debug.Log("Shark " + totalSharkSpawnedCount + " Spawned!");
     }
 }

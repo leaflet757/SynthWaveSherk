@@ -9,35 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1967365838934632}
+  m_RootGameObject: {fileID: 1747630591201300}
   m_IsPrefabParent: 1
---- !u!1 &1967365838934632
+--- !u!1 &1747630591201300
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4831128798621578}
-  - component: {fileID: 33907490582154340}
-  - component: {fileID: 65537747977776018}
-  - component: {fileID: 23100926455449616}
-  - component: {fileID: 114713736721702346}
-  - component: {fileID: 114554312917362054}
-  - component: {fileID: 54057770395451722}
+  - component: {fileID: 4138319533145622}
+  - component: {fileID: 33121390983366888}
+  - component: {fileID: 65808823595031392}
+  - component: {fileID: 23127470764960478}
+  - component: {fileID: 54096676655370638}
+  - component: {fileID: 114645205061336944}
   m_Layer: 0
-  m_Name: TestShark-leieuf
-  m_TagString: Shark
+  m_Name: Stage
+  m_TagString: Stage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4831128798621578
+--- !u!4 &4138319533145622
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967365838934632}
+  m_GameObject: {fileID: 1747630591201300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -45,12 +44,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23100926455449616
+--- !u!23 &23127470764960478
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967365838934632}
+  m_GameObject: {fileID: 1747630591201300}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -79,19 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33907490582154340
+--- !u!33 &33121390983366888
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967365838934632}
+  m_GameObject: {fileID: 1747630591201300}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54057770395451722
+--- !u!54 &54096676655370638
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967365838934632}
+  m_GameObject: {fileID: 1747630591201300}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -101,38 +100,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65537747977776018
+--- !u!65 &65808823595031392
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967365838934632}
+  m_GameObject: {fileID: 1747630591201300}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114554312917362054
+--- !u!114 &114645205061336944
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967365838934632}
+  m_GameObject: {fileID: 1747630591201300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6e163c419fa5a94ebe25773f18dbd22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 1
---- !u!114 &114713736721702346
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967365838934632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3769fad7192d34181eca80f6c7e755, type: 3}
+  m_Script: {fileID: 11500000, guid: 860e37b5c0e8c5144952a9e84bf06780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

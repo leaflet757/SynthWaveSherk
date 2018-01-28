@@ -6,7 +6,7 @@ public class MoveSharkScript : MonoBehaviour
 {
     float firstZ = 2F;
     float secondZ = 10.0F;
-    float movementSpeed = 0.1F;
+    public float movementSpeed = 3.0F;
     bool moveForward = true;
 
     // Update is called once per frame
@@ -14,9 +14,9 @@ public class MoveSharkScript : MonoBehaviour
     {
         // moves the object
         if (moveForward)
-            transform.Translate(0, 0, movementSpeed); 
+            transform.Translate(0, 0, movementSpeed * Time.deltaTime); 
         else
-            transform.Translate(0, 0, -1 * movementSpeed); 
+            transform.Translate(0, 0, -1 * movementSpeed * Time.deltaTime); 
 
         // check boundaries
         if (transform.position.z >= secondZ)
