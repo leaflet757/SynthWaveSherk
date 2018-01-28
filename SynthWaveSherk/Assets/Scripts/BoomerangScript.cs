@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BoomerangScript : MonoBehaviour
 {
+    public AudioClip throwANDwhoosh;
+    public AudioClip reloadrang;
+
     public string PlayerString = "Player";
     public float DurationUntilReturns = 2.0f;
     public GameObject playerCamera;
@@ -13,12 +16,18 @@ public class BoomerangScript : MonoBehaviour
     private Collider col;
     private float durationCounter = 0;
 
+    private AudioSource source;
+
     private bool isHeldByPlayer = true;
     public bool IsHeldByPlayer
     {
         get { return isHeldByPlayer; }
     }
 
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -44,6 +53,7 @@ public class BoomerangScript : MonoBehaviour
     {
         if (isHeldByPlayer)
         {
+            source.PlayOneShot(throwANDwhoosh);
             Debug.Log("Throwing Sicc Raangs!");
             col.enabled = true;
             isHeldByPlayer = false;
@@ -64,6 +74,7 @@ public class BoomerangScript : MonoBehaviour
 
     private void ResetBoomerang()
     {
+        source.PlayOneShot(reloadrang);
         Debug.Log("Boomerang Resetting");
         isHeldByPlayer = true;
         rb.isKinematic = true;
