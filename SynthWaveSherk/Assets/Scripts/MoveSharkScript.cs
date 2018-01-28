@@ -11,6 +11,18 @@ public class MoveSharkScript : MonoBehaviour
     public float movementSpeed = 3.0F;
     bool moveForward = true;
 
+    private Animator sharkAnim;
+
+    public string IdleState = "HumanoidCrouchIdle";
+    public string RunningState = "HumanoidRun";
+
+
+    private void Start()
+    {
+        sharkAnim = GetComponent<Animator>();
+        //sharkAnim.Play(IdleState); // Should already be set as default in editor
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +40,12 @@ public class MoveSharkScript : MonoBehaviour
             if (transform.position.z <= firstZ)
                 moveForward = true;
         }
+    }
+
+    public void StartAttack()
+    {
+        IsAttacking = true;
+        //sharkAnim.Play(RunningState);
     }
 
 }

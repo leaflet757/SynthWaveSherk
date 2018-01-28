@@ -9,7 +9,7 @@ public class BeginSharkAggro : MonoBehaviour {
         if (other.gameObject.tag == "Shark")
         {
             Debug.Log("Begin Attack!");
-            other.gameObject.GetComponent<MoveSharkScript>().IsAttacking = true;
+            other.gameObject.GetComponent<MoveSharkScript>().StartAttack();
         }
     }
 }

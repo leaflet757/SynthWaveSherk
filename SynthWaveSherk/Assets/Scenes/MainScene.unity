@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnTargetPlane: {fileID: 1579540604}
   SpawnSourcePlane: {fileID: 1100169342}
-  SharkPrefab: {fileID: 1416804259015752, guid: 8aeb90cb93f4e80429cb27325eba9537,
+  SharkPrefab: {fileID: 1627957089639086, guid: 8aeb90cb93f4e80429cb27325eba9537,
     type: 2}
   OffLimitsZone: {fileID: 75427858}
   SharkIntervalInSeconds: 0.6
