@@ -256,7 +256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4310619826890642, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.224
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 4310619826890642, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -281,27 +281,6 @@ Prefab:
     - target: {fileID: 4310619826890642, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1144793355444192, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 54638584917286692, guid: fbae17a911df68942ae3cc2a9488fdd7,
-        type: 2}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4439589055035584, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4439589055035584, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.903
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069513737435316, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
-      propertyPath: m_Name
-      value: MainPlayerCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fbae17a911df68942ae3cc2a9488fdd7, type: 2}
@@ -415,6 +394,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerCamera: {fileID: 1345512121}
+  CrosshairNone: {fileID: 1945945705}
+  CrosshairLock: {fileID: 804871365}
   SharkTag: Shark
 --- !u!1 &804871363
 GameObject:
