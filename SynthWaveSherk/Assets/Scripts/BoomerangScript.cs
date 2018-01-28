@@ -43,6 +43,7 @@ public class BoomerangScript : MonoBehaviour
         {
             Debug.Log("Throwing Sicc Raangs!");
             isHeldByPlayer = false;
+            rb.isKinematic = false;
             transform.SetParent(null);
             rb.AddForce(playerCamera.transform.forward * 50, ForceMode.Impulse);
             rb.freezeRotation = false;
@@ -61,6 +62,7 @@ public class BoomerangScript : MonoBehaviour
     {
         Debug.Log("Boomerang Resetting");
         isHeldByPlayer = true;
+        rb.isKinematic = true;
         durationCounter = 0;
         transform.SetParent(playerCamera.transform, false);
         transform.position = StartingTransform.position;

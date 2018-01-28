@@ -25,8 +25,9 @@ GameObject:
   - component: {fileID: 114713736721702346}
   - component: {fileID: 114554312917362054}
   - component: {fileID: 54057770395451722}
+  - component: {fileID: 114885250605931270}
   m_Layer: 0
-  m_Name: TestShark-leieuf
+  m_Name: Shark_old
   m_TagString: Shark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,3 +137,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3769fad7192d34181eca80f6c7e755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114885250605931270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967365838934632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b976903467c0e20408cb70a8bff7b2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsAttacking: 0
+  movementSpeed: 3

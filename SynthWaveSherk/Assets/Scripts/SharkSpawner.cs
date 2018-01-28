@@ -21,9 +21,8 @@ public class SharkSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         offLimitsBounds = OffLimitsZone.GetComponent<BoxCollider>().bounds;
-        validStartBounds = SpawnSourcePlane.GetComponent<Renderer>().bounds; // TODO: For some reason the bounds are larger than the plane's size but it works ¯\_(ツ)_/¯
+        validStartBounds = SpawnSourcePlane.GetComponent<Renderer>().bounds;
         validTargetBounds = SpawnTargetPlane.GetComponent<Renderer>().bounds;
-        Debug.Log(validTargetBounds.size);
     }
 	
 	// Update is called once per frame
@@ -80,6 +79,6 @@ public class SharkSpawner : MonoBehaviour {
         LaunchShark(newShark.GetComponent<Rigidbody>(), startLocation, targetLocation);
         ++totalSharkSpawnedCount;
 
-        Debug.Log("Shark " + totalSharkSpawnedCount + " Spawned!");
+        //Debug.Log("Shark " + totalSharkSpawnedCount + " Spawned!");
     }
 }
