@@ -780,6 +780,7 @@ GameObject:
   - component: {fileID: 1649779215}
   - component: {fileID: 1649779214}
   - component: {fileID: 1649779213}
+  - component: {fileID: 1649779217}
   m_Layer: 0
   m_Name: SharkSourcePlane
   m_TagString: Untagged
@@ -855,6 +856,17 @@ Transform:
   m_Father: {fileID: 181464486}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649779217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649779212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cf09df52a8d2a4ea8e3470c0f85bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1890253493
 GameObject:
   m_ObjectHideFlags: 0

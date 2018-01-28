@@ -59,7 +59,7 @@ public class SharkSpawner : MonoBehaviour {
         
         Vector3 startLocation = new Vector3(
             Random.Range(-validStartBounds.size.x / 2, validStartBounds.size.x / 2),
-            SpawnSourcePlane.transform.position.y, 
+            SpawnSourcePlane.transform.position.y + 10, // hack that hopefully wont destroy the shark instantly 
             Random.Range(-validStartBounds.size.z / 2, validStartBounds.size.z / 2)
         );
 
