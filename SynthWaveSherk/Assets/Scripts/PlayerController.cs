@@ -5,46 +5,56 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public Camera mainCamera = null;
+    public GameObject model;
+
     public float MoveSpeed = 10;
     public float CameraSensitivity = 5;
 
-    private Rigidbody rb = null;
-
-    private Quaternion playerRotation;
+    //private Rigidbody rb = null;
+    //private Quaternion playerRotation;
 
     private float mouseX = 0;
     private float mouseY = 0;
+    private float vInput = 0;
+    private float hInput = 0;
+
+    private bool vOnce = false;
 
     private void Awake()
     {
-        playerRotation = new Quaternion(1, 1, 0, 1); // only care about x and y
+        //playerRotation = new Quaternion(1, 1, 0, 1); // only care about x and y
     }
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
     }
 
     void Update ()
     {
-        float vInput = Input.GetAxis("Vertical");
-        if (vInput != 0)
-        {
-            rb.AddForce(transform.forward * MoveSpeed * vInput);
-        }
+        // player movement
+        vInput = Input.GetAxis("Vertical");
+        hInput = Input.GetAxis("Horizontal");
 
-        float hInput = Input.GetAxis("Horizontal");
-        if (hInput != 0)
-        {
-            rb.AddForce(transform.right * MoveSpeed * hInput);
-        }
-	}
-
-    private void LateUpdate()
-    {
+        // Camera Input
         mouseX += Input.GetAxis("Mouse X") * CameraSensitivity;
         mouseY += Input.GetAxis("Mouse Y") * CameraSensitivity;
 
+        // rotate player
+        transform.rotation = Quaternion.Euler(0, mouseX, 0);
+	}
+
+    private void FixedUpdate()
+    {
+        if (vInput != 0 || hInput != 0)
+        {
+            transform.Translate(hInput * Time.deltaTime * MoveSpeed, 0, vInput * Time.deltaTime * MoveSpeed);
+        }
+    }
+
+    private void LateUpdate()
+    {
+        // Rotate Camera
         mainCamera.transform.rotation = Quaternion.Euler(-mouseY, mouseX, 0);
     }
 }
