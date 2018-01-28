@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 54148042015141600}
   - component: {fileID: 114630201890069524}
   - component: {fileID: 95392719521347024}
-  - component: {fileID: 82642529524229016}
+  - component: {fileID: 82368041146282244}
   m_Layer: 0
   m_Name: TheShark
   m_TagString: Shark
@@ -904,7 +904,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!82 &82642529524229016
+--- !u!82 &82368041146282244
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -913,10 +913,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: b08614bb668064249a20bc7b4525d5f4, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.03
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -971,7 +971,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1012,7 +1012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ecdc2f459c5904eb608b909af2aa2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathSound1: {fileID: 8300000, guid: 942c057ba4b46bd43a342726db372f2e, type: 3}
   deathSound2: {fileID: 8300000, guid: b08614bb668064249a20bc7b4525d5f4, type: 3}
 --- !u!114 &114388434001763246
 MonoBehaviour:
