@@ -19,6 +19,8 @@ public class Timer : MonoBehaviour {
 
     public Text timeUiText;
     public Text sharkKillText;
+    public Text gameOverText;
+    public Image crosshairImage;
     public static int SharkDeathCount = 0;
     private int lazyDeathCheck = 0;
 
@@ -46,11 +48,7 @@ public class Timer : MonoBehaviour {
         timeUiText.text = label + ": " + timeLeft;
         if (timeLeft < 0)
         {
-            //Time.timeScale = 0;     // just pauses time, need to end game
-            source.PlayOneShot(megumino);
-            Debug.Log("The Game is over!");
-
-            // TODO: play explosion here and game over
+            EndGame();
         }
     }
 
@@ -65,4 +63,15 @@ public class Timer : MonoBehaviour {
             sharkKillText.text = SharkDeathCount.ToString();
         }
 	}
+
+    public void EndGame()
+    {
+        //Time.timeScale = 0;     // just pauses time, need to end game
+        source.PlayOneShot(megumino);
+        Debug.Log("The Game is over!");
+        crosshairImage.enabled = false;
+        gameOverText.enabled = true;
+        // TODO: play explosion here and game over
+    }
+
 }
