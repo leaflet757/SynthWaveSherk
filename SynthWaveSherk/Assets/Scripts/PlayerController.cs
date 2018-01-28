@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour {
         // rotate player
         transform.rotation = Quaternion.Euler(0, mouseX, 0);
 
-
         // Rooty Shooty
         if (Input.GetButton("Fire1"))
         {
