@@ -19,6 +19,8 @@ public class HudController : MonoBehaviour {
 
     void LateUpdate ()
     {
+        CrosshairLock.enabled = false;
+
         RaycastHit hitInfo;
         if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hitInfo))
         {
@@ -26,10 +28,6 @@ public class HudController : MonoBehaviour {
             {
                 CrosshairLock.enabled = true;
             }
-        }
-        else
-        {
-            CrosshairLock.enabled = false;
         }
 	}
 }
