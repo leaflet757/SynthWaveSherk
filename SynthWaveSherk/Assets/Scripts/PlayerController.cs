@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public Camera mainCamera = null;
     public GameObject model;
+    public BoomerangScript Boomerang = null;
 
     public float MoveSpeed = 10;
     public float CameraSensitivity = 5;
@@ -45,6 +46,11 @@ public class PlayerController : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0, mouseX, 0);
 
 
+        // Rooty Shooty
+        if (Input.GetButton("Fire1"))
+        {
+            Boomerang.ThrowTowardsDirection(mainCamera.transform.forward);
+        }
 	}
 
     private void FixedUpdate()
