@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     private void Awake()
     {
         //playerRotation = new Quaternion(1, 1, 0, 1); // only care about x and y
+        Cursor.visible = false;
     }
 
     private void Start()
@@ -42,6 +43,8 @@ public class PlayerController : MonoBehaviour {
 
         // rotate player
         transform.rotation = Quaternion.Euler(0, mouseX, 0);
+
+
 	}
 
     private void FixedUpdate()
