@@ -9,17 +9,29 @@ public class SharkSpawner : MonoBehaviour {
     public GameObject SharkPrefab;
     public GameObject OffLimitsZone;
 
+    public AudioClip launchSound;
+
     public float SharkIntervalInSeconds = 5.0f;
 
     private Bounds offLimitsBounds;
     private Bounds validStartBounds;
     private Bounds validTargetBounds;
 
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
     private float spawnCounter = 0;
     private float totalSharkSpawnedCount = 0;
 
-	// Use this for initialization
-	void Start () {
+    //called before start -- gets audio source
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
+    // Use this for initialization
+    void Start () {
         offLimitsBounds = OffLimitsZone.GetComponent<BoxCollider>().bounds;
         validStartBounds = SpawnSourcePlane.GetComponent<Renderer>().bounds;
         validTargetBounds = SpawnTargetPlane.GetComponent<Renderer>().bounds;
@@ -50,6 +62,9 @@ public class SharkSpawner : MonoBehaviour {
         float velocity = Mathf.Sqrt(distance * Physics.gravity.magnitude / Mathf.Sin(2 * a));
 
         sharkBody.velocity = velocity * direction.normalized;
+
+        float newPitch = Random.Range(.5f, 1.0f);
+        source.PlayOneShot(launchSound, newPitch);
     }
 
     void SpawnShark()
