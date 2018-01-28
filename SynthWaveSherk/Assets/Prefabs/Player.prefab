@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 114285470930995358}
   - component: {fileID: 54106608394428012}
   - component: {fileID: 136855388940339500}
+  - component: {fileID: 114398752770864838}
   m_Layer: 0
   m_Name: Boomer
   m_TagString: Untagged
@@ -273,6 +274,21 @@ GameObject:
   - component: {fileID: 4902435832963996}
   m_Layer: 0
   m_Name: mixamorig:LeftHandPinky3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1158958887779328
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4123433838455548}
+  m_Layer: 0
+  m_Name: StartingBoomerTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1175,6 +1191,19 @@ Transform:
   m_Father: {fileID: 4995443832229170}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4123433838455548
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1158958887779328}
+  m_LocalRotation: {x: 0.10964513, y: 0.6991285, z: 0.005489245, w: 0.7065176}
+  m_LocalPosition: {x: 0.906621, y: -0.06261694, z: 0.9798376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4439589055035584}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 8.468, y: 90.093, z: 9.372001}
 --- !u!4 &4125744078391420
 Transform:
   m_ObjectHideFlags: 1
@@ -1480,6 +1509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4589248675965194}
+  - {fileID: 4123433838455548}
   m_Father: {fileID: 4310619826890642}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2286,8 +2316,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerString: Player
-  DurationUntilReturns: 2
+  DurationUntilReturns: 1.5
   playerCamera: {fileID: 1069513737435316}
+  StartingTransform: {fileID: 4123433838455548}
+--- !u!114 &114398752770864838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076761488359830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864682d29b8a9de478aafdcd600c4f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
 --- !u!114 &114921265177890012
 MonoBehaviour:
   m_ObjectHideFlags: 1
