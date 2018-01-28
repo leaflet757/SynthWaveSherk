@@ -1187,7 +1187,7 @@ MonoBehaviour:
     type: 2}
   OffLimitsZone: {fileID: 75427858}
   launchSound: {fileID: 8300000, guid: 268a6aae2c936924a8db59b98382ca40, type: 3}
-  SharkIntervalInSeconds: 0.6
+  SharkIntervalInSeconds: 0.9
 --- !u!4 &1604113353
 Transform:
   m_ObjectHideFlags: 0
@@ -1271,7 +1271,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
