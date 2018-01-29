@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAttacking: 0
-  movementSpeed: 3
+  moveSpeed: 10
   IdleState: HumanoidCrouchIdle
   RunningState: HumanoidRun
 --- !u!136 &136430248863377928
