@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class OnSharkDeath : OnDeathScript
 {
-    public AudioClip deathSound1;
     public AudioClip deathSound2;
 
     private AudioSource source;
 
-    void Awake()
+    void Start()
     {
         source = GetComponent<AudioSource>();
     }
-
+    
     public override void PerformDeathActionAndDestroy()
     {
-        source.PlayOneShot(deathSound2, 1f);
+        ++Timer.SharkDeathCount;
+
         Debug.Log("TODO: OnSharkDeath");
-        Destroy(gameObject);
+        source.PlayOneShot(deathSound2);
+        
+        Destroy(gameObject,2.32f);
     }
 }
