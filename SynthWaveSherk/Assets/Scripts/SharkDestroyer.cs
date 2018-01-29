@@ -13,6 +13,7 @@ public class SharkDestroyer : MonoBehaviour {
         else if (collision.gameObject.tag == "Player")
         {
             GameObject.Find("Timer").GetComponent<Timer>().EndGame();
+            
         }
     }
 }
