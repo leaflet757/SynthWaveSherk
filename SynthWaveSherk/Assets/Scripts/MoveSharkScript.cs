@@ -15,15 +15,17 @@ public class MoveSharkScript : MonoBehaviour
 
     public string IdleState = "HumanoidCrouchIdle";
     public string RunningState = "HumanoidRun";
-    Vector3 stage1Pos;
-    Vector3 stage2Pos;
+    Vector3 targetStage;
 
     private void Start()
     {
         sharkAnim = GetComponent<Animator>();
         sharkAnim.Play(IdleState); // Should already be set as default in editor
-        stage1Pos = GameObject.Find("Stage1").transform.position;
-        stage2Pos = GameObject.Find("Stage2").transform.position;
+
+        if (Random.value < 0.5)
+            targetStage = GameObject.Find("Stage1").transform.position;
+        else
+            targetStage = GameObject.Find("Stage2").transform.position;
     }
 
 
@@ -34,9 +36,9 @@ public class MoveSharkScript : MonoBehaviour
         {
             Vector3 sharkPos = transform.position;
 
-            if (Vector3.Distance(sharkPos, stage2Pos) >= 0)
+            if (Vector3.Distance(sharkPos, targetStage) >= 0)
             {
-                Vector3 dirOfTravel = stage2Pos - sharkPos;
+                Vector3 dirOfTravel = targetStage - sharkPos;
                 dirOfTravel.Normalize();
                 transform.Translate(dirOfTravel.x * moveSpeed, dirOfTravel.y * moveSpeed, dirOfTravel.z * moveSpeed);
             }
