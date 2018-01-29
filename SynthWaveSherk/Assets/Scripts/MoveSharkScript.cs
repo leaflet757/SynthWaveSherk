@@ -8,7 +8,7 @@ public class MoveSharkScript : MonoBehaviour
 
     float firstZ = 2F;
     float secondZ = 10.0F;
-    public float moveSpeed = 20F;
+    public float moveSpeed = 1F;
     bool moveForward = true;
 
     private Animator sharkAnim;
@@ -38,7 +38,7 @@ public class MoveSharkScript : MonoBehaviour
             {
                 Vector3 dirOfTravel = stage2Pos - sharkPos;
                 dirOfTravel.Normalize();
-                transform.Translate(dirOfTravel.x * moveSpeed, dirOfTravel.y * moveSpeed, dirOfTravel.z * moveSpeed);
+                transform.Translate(dirOfTravel.x * moveSpeed * Time.deltaTime, dirOfTravel.y * moveSpeed * Time.deltaTime, dirOfTravel.z * moveSpeed * Time.deltaTime);
             }
             
 
