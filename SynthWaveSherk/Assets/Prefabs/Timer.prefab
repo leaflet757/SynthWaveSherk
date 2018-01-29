@@ -52,5 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLeft: 30
+  megumino: {fileID: 0}
   Stage1: {fileID: 0}
   Stage2: {fileID: 0}
+  label: Sicc Beat Meter
+  timeUiText: {fileID: 0}
+  sharkKillText: {fileID: 0}
+  gameOverText: {fileID: 0}
+  crosshairImage: {fileID: 0}
